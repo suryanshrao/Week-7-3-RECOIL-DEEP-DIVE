@@ -20,10 +20,10 @@ function MainApp(){
   return (
     <div>
       <button>Home</button>
-      <button>My Network [{networkCount}]</button>
-      <button>Jobs [{jobCount}]</button>
-      <button>Messaging [{messageCount}]</button>
-      <button>Notifications [{notificationsCount}] </button>
+      <button>My Network [{networkCount >= 99 ? "99 +": networkCount}]</button>
+      <button>Jobs [{jobCount >= 99 ? "99 +": jobCount}]</button>
+      <button>Messaging [{messageCount >= 99 ? "99 +": messageCount}]</button>
+      <button>Notifications [{notificationsCount >= 99 ? "99 +": notificationsCount}] </button>
       <button> Me </button>
     </div>
   )
