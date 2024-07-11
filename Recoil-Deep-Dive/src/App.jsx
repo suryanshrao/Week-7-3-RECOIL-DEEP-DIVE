@@ -1,9 +1,17 @@
-import { useState } from 'react'
-import { useRecoilValue } from 'recoil'
+
+import { RecoilRoot, useRecoilValue } from 'recoil'
 import { jobsAtom, mesageAtom, networkAtom, notificationsAtom } from './store/atoms/context'
 
 function App() {
+  return (
+    <RecoilRoot>
+      <MainApp/>
+    </RecoilRoot>
+   
+  )
+}
 
+function MainApp(){
   const networkCount = useRecoilValue(networkAtom);
   const jobCount = useRecoilValue(jobsAtom);
   const messageCount = useRecoilValue(mesageAtom);
